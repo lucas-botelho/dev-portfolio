@@ -4,34 +4,54 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
-  Button,
+  Flex,
 } from "@chakra-ui/react";
+import { useRecoilState } from "recoil";
+import { resumeModalState } from "@/atoms/resumeModalAtom";
+import ResumeHeader from "@/components/Resume/ResumeHeader";
+import ResumeSummary from "@/components/Resume/ResumeSummary";
+import ResumeEducation from "@/components/Resume/ResumeEducation";
+import ResumeWorkExperience from "@/components/Resume/ResumeWorkExperience";
 
 type ResumeModalProps = {};
 
 const ResumeModal: React.FC<ResumeModalProps> = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [modalState, setModalState] = useRecoilState(resumeModalState);
+
+  const handleModalClose = () => {
+    setModalState((prev) => ({
+      ...prev,
+      isOpen: false,
+    }));
+  };
+
   return (
     <>
-      <Button onClick={onOpen}>Open Modal</Button>
-
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={modalState.isOpen} onClose={handleModalClose}>
         <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+        <ModalContent maxW={"80%"}>
+          <ModalHeader></ModalHeader>
           <ModalCloseButton />
-          <ModalBody>Modal Body</ModalBody>
-
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-            <Button variant="ghost">Secondary Action</Button>
-          </ModalFooter>
+          <ModalBody
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Flex
+              direction={"column"}
+              align={"flex"}
+              justify={"center"}
+              width={"90%"}
+            >
+              <ResumeHeader />
+              <ResumeSummary />
+              <ResumeWorkExperience />
+              <ResumeEducation />
+            </Flex>
+          </ModalBody>
         </ModalContent>
       </Modal>
     </>

@@ -3,6 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { theme } from "../chakra/theme";
 import Navbar from "@/components/Navbar/Navbar";
 import Layout from "@/components/Layout/Layout";
+import { RecoilRoot } from "recoil";
 export default function RootLayout({
   children,
 }: {
@@ -12,9 +13,11 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <ChakraProvider theme={theme}>
-          <Layout>{children}</Layout>
-        </ChakraProvider>
+        <RecoilRoot>
+          <ChakraProvider theme={theme}>
+            <Layout>{children}</Layout>
+          </ChakraProvider>
+        </RecoilRoot>
       </body>
     </html>
   );

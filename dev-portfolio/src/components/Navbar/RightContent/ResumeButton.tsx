@@ -1,9 +1,12 @@
+import { resumeModalState } from "@/atoms/resumeModalAtom";
 import { Button } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+import { useSetRecoilState } from "recoil";
 
 type ResumeButtonProps = {};
 
 const ResumeButton: React.FC<ResumeButtonProps> = () => {
+  const setAuthModalState = useSetRecoilState(resumeModalState);
   return (
     <>
       <Button
@@ -12,6 +15,7 @@ const ResumeButton: React.FC<ResumeButtonProps> = () => {
         display={{ base: "none", sm: "flex" }}
         width={{ base: "70px", sm: "110px" }}
         mr={0}
+        onClick={() => setAuthModalState({ isOpen: true })}
       >
         Resume
       </Button>
