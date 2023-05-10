@@ -5,7 +5,7 @@ import ProjectCard from "@/components/Content/ProjectCard";
 export default function Home() {
   return (
     <>
-      <ProjectCard></ProjectCard>
+      <ProjectCard alignImageRight={false}></ProjectCard>
     </>
   );
 }
