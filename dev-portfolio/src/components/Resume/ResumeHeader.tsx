@@ -7,7 +7,6 @@ type ResumeHeaderProps = {};
 const ResumeHeader: React.FC<ResumeHeaderProps> = () => {
   return (
     <>
-      <BrandBorderDivider />
       <Flex align={"center"} direction={"column"}>
         <Text fontSize={"5xl"} fontWeight={"500"} marginBottom={"10px"}>
           Lucas Botelho
