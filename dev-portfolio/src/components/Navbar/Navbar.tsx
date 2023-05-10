@@ -12,8 +12,13 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <Flex bg={"white"} height={"44px"} padding={"6px 12px"} align={"center"}>
       <Flex align={"center"} onClick={() => router.back()} flexGrow={1}>
-        <ArrowBackIcon boxSize={"6"} w={"35px"} mr={2} />
-        Porfolio
+        <ArrowBackIcon
+          _hover={{ color: "#7ac4dd" }}
+          color={"gray.400"}
+          boxSize={"6"}
+          w={"35px"}
+          mr={2}
+        />
       </Flex>
       <RightContent />
     </Flex>

@@ -1,11 +1,14 @@
 "use client";
 import { Flex, Text, Image, AspectRatio, Button } from "@chakra-ui/react";
 import React from "react";
+import NextLink from "next/link";
+import { Link } from "@chakra-ui/react";
 
 type ProjectCardProps = {
   imgSrc: string;
   projectDescription: string;
   title: string;
+  gitUrl: string;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
@@ -47,8 +50,15 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
               {props.projectDescription}
             </Text>
           </Flex>
-          <Flex bottom={"1px"} left={"32%"} align={"center"}>
-            <Button variant={"solid"}>View it on GitHub!</Button>
+          <Flex
+            marginBottom={"-10px"}
+            marginTop={"30px"}
+            left={"32%"}
+            align={"center"}
+          >
+            <Link as={NextLink} href={props.gitUrl} isExternal>
+              <Button variant={"solid"}>View it on GitHub!</Button>
+            </Link>
           </Flex>
         </Flex>
 
