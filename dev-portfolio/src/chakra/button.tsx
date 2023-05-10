@@ -20,10 +20,11 @@ export const Button: ComponentStyleConfig = {
   },
   variants: {
     solid: {
-      color: "white",
-      bg: "blue.500",
+      color: "#7ac4c2",
+      bg: "white",
       _hover: {
-        bg: "blue.400",
+        bg: "#7ac4c2",
+        color: "white",
       },
     },
     outline: {

@@ -1,15 +1,18 @@
 "use client";
-import { Flex, Text, Image, Box, AspectRatio } from "@chakra-ui/react";
+import { Flex, Text, Image, AspectRatio, Button } from "@chakra-ui/react";
 import React from "react";
 
 type ProjectCardProps = {
-  alignImageRight: boolean;
+  imgSrc: string;
+  projectDescription: string;
+  title: string;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = (props) => {
   return (
     <>
       <Flex
+        margin={"10px 0px 10px 0px"}
         bgColor={"white"}
         direction={"row"}
         align={"center"}
@@ -19,28 +22,48 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
         borderColor="gray.200"
         borderRadius={"40px"}
       >
-        <Flex>
-          <Text w={"50%"} ml={"15px"} mr={"10px"} align={"left"} width={"100%"}>
-            At Upstatement, we recently wrapped up a project where one of the
-            more notable engineering tasks was implementing global search for a
-            large WordPress multisite network. We were tasked with revamping the
-            web experience for a college of a large university, and each school
-            under this college had its own individual site within the broader
-            network.
-          </Text>
+        <Flex direction={"column"} align={"center"}>
+          <Flex marginBottom={"20px"}>
+            <Text
+              fontSize="4xl"
+              w={"50%"}
+              ml={"15px"}
+              mr={"10px"}
+              align={"left"}
+              width={"100%"}
+            >
+              {props.title}
+            </Text>
+          </Flex>
+
+          <Flex align={"center"}>
+            <Text
+              w={"50%"}
+              ml={"15px"}
+              mr={"10px"}
+              align={"left"}
+              width={"100%"}
+            >
+              {props.projectDescription}
+            </Text>
+          </Flex>
+          <Flex bottom={"1px"} left={"32%"} align={"center"}>
+            <Button variant={"solid"}>View it on GitHub!</Button>
+          </Flex>
         </Flex>
+
         <Flex>
           <AspectRatio
-            maxW={"600px"}
-            minW={"400px"}
+            w="520px"
+            ratio={16 / 9}
             mt={"10px"}
-            mb={"10px"}
-            mr={"10px"}
+            mb={"15px"}
+            mr={"20px"}
           >
             <Image
-              borderRadius={"50px"}
-              src="https://bit.ly/dan-abramov"
-              alt="Dan Abramov"
+              shadow={"5px 5px 5px gray"}
+              borderRadius={"40px"}
+              src={props.imgSrc}
             />
           </AspectRatio>
         </Flex>
