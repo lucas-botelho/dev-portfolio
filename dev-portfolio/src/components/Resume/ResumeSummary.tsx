@@ -15,12 +15,12 @@ const ResumeSummary: React.FC = () => {
       >
         <Text fontSize={"sm"} marginBottom={"3px"}>
           Im a certified Sitecore 10 developer with four years of experience and
-          an ongoing Bachelor degree in Software Engineering.
+          an ongoing Bachelor's degree in Software Engineering.
         </Text>
         <Text fontSize={"sm"} marginBottom={"10px"}>
-          My expertise are with Sitecore XP/XM Cloud, C#, .NET framework and
-          NextJs. I'm experience with the Sitecore Helix Architecture, Agile
-          methodologies, project management and version control.
+          My expertise is with Sitecore XP/XM Cloud, C#, .NET framework, and
+          NextJs. I'm experienced with Sitecore Helix Architecture, Agile
+          methodologies, project management, and version control.
         </Text>
       </Flex>
     </>

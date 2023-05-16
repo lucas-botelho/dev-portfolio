@@ -30,7 +30,7 @@ const ResumeEducation: React.FC<ResumeEducationProps> = () => {
 
       <Flex bg={"white"} marginTop={"10px"} padding={"6px 12px 0px"}>
         <Flex align={"center"} flexGrow={1}>
-          Solent University
+          Southampton Solent University
         </Flex>
         <Flex align={"right"}>
           <Text fontSize={"sm"}>2018 - 2019</Text>

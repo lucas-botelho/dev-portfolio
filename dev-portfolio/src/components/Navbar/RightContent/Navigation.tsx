@@ -36,7 +36,7 @@ const Navigation: React.FC<NavigationProps> = () => {
         href="/contacts"
         margin={"0px 10px 0px 10px"}
       >
-        Get in touch! <EmailIcon marginBottom={"5px"} />
+        Get in touch! <EmailIcon marginBottom={"3px"} />
       </Link>
     </>
   );
