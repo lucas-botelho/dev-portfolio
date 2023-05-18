@@ -42,8 +42,8 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           <Flex align={"center"}>
             <Text
               w={"50%"}
-              ml={"15px"}
-              mr={"10px"}
+              ml={"35px"}
+              mr={"20px"}
               align={"left"}
               width={"100%"}
             >
@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
           </Flex>
         </Flex>
 
-        <Flex>
+        <Flex marginRight={"10px"}>
           <AspectRatio
             w="520px"
             ratio={16 / 9}
@@ -71,7 +71,7 @@ const ProjectCard: React.FC<ProjectCardProps> = (props) => {
             mr={"20px"}
           >
             <Image
-              shadow={"5px 5px 5px gray"}
+              shadow={"2px 3px 5px 5px gray"}
               borderRadius={"40px"}
               src={props.imgSrc}
             />
