@@ -34,7 +34,6 @@ export default function Home() {
               borderRadius="full"
               boxSize="150px"
               src="https://media.licdn.com/dms/image/C4D03AQHTDv00ZE_fFg/profile-displayphoto-shrink_800_800/0/1567180607259?e=1689811200&v=beta&t=o99n3isZKiV1xqgcFtrzZBApcyFwIoF7yzQgfPv-2_M"
-              alt="Dan Abramov"
             />
           </Flex>
         </Flex>
@@ -92,7 +91,7 @@ export default function Home() {
             <Link
               as={NextLink}
               href={
-                "https://drive.google.com/file/d/1S6G3JwPst_3AQsgO8qOjItyXOH0pLW4Z/view?usp=share_link"
+                "https://drive.google.com/file/d/11xYg1qgO1QbY1orM-xAujwExjgYg51_N/view?usp=share_link"
               }
               isExternal
             >
