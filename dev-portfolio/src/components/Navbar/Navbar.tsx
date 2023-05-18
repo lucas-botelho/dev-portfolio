@@ -34,21 +34,10 @@ const Navbar: React.FC<NavbarProps> = () => {
           </Button>
         </Link>
       </Flex>
-      <Flex align={"center"}>
-        <Link
-          as={NextLink}
-          href={"public\3a641126-51be-4d97-8a00-5f905a54ad0a.jpg"}
-          isExternal
-        >
-          <Button variant={"solid"}>
-            <TiSocialLinkedin style={{ height: "25px", width: "30px" }} />
-          </Button>
-        </Link>
-      </Flex>
       <Flex align={"center"} flexGrow={1}>
         <Link
           as={NextLink}
-          href={"https://www.linkedin.com/in/lbotelho17/"}
+          href={"https://github.com/lucas-botelho"}
           isExternal
         >
           <Button variant={"solid"}>

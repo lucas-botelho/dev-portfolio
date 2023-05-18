@@ -33,7 +33,7 @@ const Navigation: React.FC<NavigationProps> = () => {
         textDecor={"none"}
         color={"gray.400"}
         as={NextLink}
-        href="/contacts"
+        href="mailto:l_botelho@hotmail.com"
         margin={"0px 10px 0px 10px"}
       >
         Get in touch! <EmailIcon marginBottom={"3px"} />
